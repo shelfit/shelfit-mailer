@@ -1,0 +1,13 @@
+framework:
+    messenger:
+        transports:
+            mailer_send:
+              dsn: '%env(MESSENGER_TRANSPORT_DSN)%'
+              options:
+                exchange: { name: 'mailer.email' }
+                queues:
+                  mailer.email.send: ~
+
+        routing:
+            # Route your messages to the transports
+            # 'App\Message\YourMessage': async
