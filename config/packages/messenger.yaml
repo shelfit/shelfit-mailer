@@ -9,5 +9,4 @@ framework:
                   mailer.email.send: ~
 
         routing:
-            # Route your messages to the transports
-            # 'App\Message\YourMessage': async
+            'App\Message\SendEmailMessage': mailer_send
